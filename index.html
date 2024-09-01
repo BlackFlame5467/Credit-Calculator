@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Кредитний калькулятор</title>
+	</head>
+	<body>
+		<header class="header">
+			<h2 class="header__title">Кредитний калькулятор</h2>
+		</header>
+		<main class="main">
+			<div class="container">
+				<div class="main__block">
+					<div class="main__wrapper">
+						<form class="form">
+							<div class="form__slider-block">
+								<div class="form__slider-container">
+									<h4 class="form__slider-title">Сума кредиту</h4>
+									<label class="form__slider-label">
+										<input
+											type="number"
+											class="form__slider-input"
+											id="input__count"
+										/>
+										<input
+											type="range"
+											min="1000"
+											max="50000"
+											value="1000"
+											step="100"
+											class="form__slider"
+											id="slider__count"
+										/>
+									</label>
+								</div>
+								<div class="form__slider-values">
+									<p class="form__slider-value">1000 грн</p>
+									<p class="form__slider-value">50000 грн</p>
+								</div>
+							</div>
+							<div class="form__slider-block">
+								<div class="form__slider-container">
+									<h4 class="form__slider-title">Період погашення (днів)</h4>
+									<label class="form__slider-label">
+										<input
+											type="number"
+											class="form__slider-input"
+											id="input__days"
+										/>
+										<input
+											type="range"
+											min="7"
+											max="60"
+											value="7"
+											class="form__slider"
+											id="slider__days"
+										/>
+									</label>
+								</div>
+								<div class="form__slider-values">
+									<p class="form__slider-value">7 днів</p>
+									<p class="form__slider-value">60 днів</p>
+								</div>
+							</div>
+						</form>
+						<div class="credit">
+							<div class="credit__wrapper">
+								<div class="credit__daily credit__block">
+									<h3 class="credit__title">Денна сума погашень</h3>
+									<span class="credit__count" id="credit__daily-count"
+										>0 грн.</span
+									>
+								</div>
+								<div class="credit__total credit__block">
+									<h3 class="credit__title">Сума повного погашення</h3>
+									<span class="credit__count" id="credit__total-count"
+										>0 грн.</span
+									>
+								</div>
+								<div class="credit__percent credit__block">
+									<h3 class="credit__title">Сума повного погашення</h3>
+									<span class="credit__count">2.2%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="btn">Отримати кредит</button>
+				</div>
+			</div>
+		</main>
+
+		<script src="./main.js"></script>
+	</body>
+</html>

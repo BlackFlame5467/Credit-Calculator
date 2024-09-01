@@ -1,0 +1,27 @@
+.credit {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 50px;
+
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: clamp(0.938rem, -6.875rem + 20.83vw, 3.125rem);
+		}
+
+		@media (max-width: 420px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		color: $color_second;
+		margin: 0 0 5px 0;
+	}
+	&__count {
+		font-weight: 700;
+		font-size: clamp(1.25rem, 1.191rem + 0.26vw, 1.5rem); // 24px
+	}
+}
