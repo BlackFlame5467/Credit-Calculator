@@ -42,8 +42,8 @@ const calcCredit = () => {
 	const daily =
 		(+inputCount.value + inputCount.value * (2.2 / 100) * inputDays.value) /
 		inputDays.value
-	totalDailyPrice.innerHTML = `${Math.round(daily)} грн.`
-	totalPrice.innerHTML = `${Math.round(daily * inputDays.value)} грн.`
+	totalDailyPrice.innerHTML = `${daily.toFixed(2)} грн.`
+	totalPrice.innerHTML = `${(daily * inputDays.value).toFixed(2)} грн.`
 }
 
 const updateSliderColor = slider => {
