@@ -51,10 +51,11 @@ const updateSliderColor = slider => {
 	slider.style.background = `linear-gradient(to right, #76c7c0 0%, #76c7c0 ${value}%, #ddd ${value}%, #ddd 100%)`
 }
 
-sliders.forEach(slider => {
+sliders.forEach((slider, index) => {
 	slider.addEventListener('input', () => {
 		updateValues()
 		updateSliderColor(slider)
+		formContainers[index].classList.remove('form__slider-container--error')
 	})
 })
 
