@@ -56,6 +56,7 @@ sliders.forEach((slider, index) => {
 		updateValues()
 		updateSliderColor(slider)
 		formContainers[index].classList.remove('form__slider-container--error')
+		btn.disabled = false
 	})
 })
 
